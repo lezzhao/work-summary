@@ -1,0 +1,69 @@
+{
+  "name": "pkg-name",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.0.4",
+  "description": "_description_",
+  "author": "lezzhao <zhaole.work@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/lezzhao/pkg-name#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lezzhao/pkg-name.git"
+  },
+  "bugs": "https://github.com/lezzhao/pkg-name/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks",
+    "up": "taze major -I"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.15.0",
+    "@types/node": "^20.12.7",
+    "bumpp": "^9.4.0",
+    "eslint": "^9.0.0",
+    "lint-staged": "^15.2.2",
+    "pnpm": "^9.0.4",
+    "rimraf": "^5.0.5",
+    "simple-git-hooks": "^2.11.1",
+    "taze": "^0.13.6",
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0",
+    "vitest": "^1.5.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
