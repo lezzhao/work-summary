@@ -2,7 +2,7 @@
   "name": "pkg-name",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@9.0.4",
+  "packageManager": "pnpm@9.15.0",
   "description": "_description_",
   "author": "lezzhao <zhaole.work@gmail.com>",
   "license": "MIT",
@@ -47,18 +47,18 @@
     "up": "taze major -I"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.15.0",
-    "@types/node": "^20.12.7",
-    "bumpp": "^9.4.0",
-    "eslint": "^9.0.0",
-    "lint-staged": "^15.2.2",
-    "pnpm": "^9.0.4",
-    "rimraf": "^5.0.5",
+    "@antfu/eslint-config": "^3.11.2",
+    "@types/node": "^20.17.9",
+    "bumpp": "^9.9.0",
+    "eslint": "^9.16.0",
+    "lint-staged": "^15.2.11",
+    "pnpm": "^9.15.0",
+    "rimraf": "^5.0.10",
     "simple-git-hooks": "^2.11.1",
-    "taze": "^0.13.6",
-    "typescript": "^5.4.5",
+    "taze": "^0.18.0",
+    "typescript": "^5.7.2",
     "unbuild": "^2.0.0",
-    "vitest": "^1.5.0"
+    "vitest": "^2.1.8"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
